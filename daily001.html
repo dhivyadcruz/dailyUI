@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    #text {
+      display: none;
+      color: red
+    }
+
+    body {
+      background-image: url("https://cutewallpaper.org/21/green-aesthetics-wallpapers/mint-green-aesthetic-Mint-green-aesthetic-Mint-aesthetic-.jpg");
+    }
+
+    .bg {
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .center {
+      margin: auto;
+      width: 70%;
+      padding: 10px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .child {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+    }
+  </style>
+</head>
+<div class="bg"></div>
+<div class="container">
+  <h2> Sign Up </h2>
+
+  <body>
+    <div class="child">
+      <form>
+        <label for="email"> <b>Email :</b></label>
+        <input type="text" 
+        placeholder="Enter valid email" 
+        id="EnterEmail"
+        name="email" required>
+        <p id="text">WARNING! Caps lock is ON.</p><br><br>
+
+
+
+        <label for="psw"> <b>Password :</b></label><input type="password" placeholder="Enter Password" name="psw"
+          required><br><br>
+        <label for="psw-repeat"> <b>Repeat Password :</b></label><input type="password" placeholder="Repeat Password"
+          name="psw-repeat" required><br><br>
+
+
+        <div class="center">
+          <input type="button" onclick="alert('This is daily ui 001 !')" value="cancel"> <button type="submit"
+            class="signupbtn">Sign Up</button>
+          <script>
+
+            var input = document.getElementById("Enter Email");
+            var text = document.getElementById("text");
+            input.addEventListener("keyup", function (event) {
+
+              if (event.getModifierState("CapsLock")) {
+                text.style.display = "block";
+              } else {
+                text.style.display = "none"
+              }
+            });
+          </script>
+        </div>
+    </div>
+
+
+
+</div>
+</form>
+</body>
+
+</html>
