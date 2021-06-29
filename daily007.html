@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/6e9789f98c.js" crossorigin="anonymous"></script>
+<style>
+   
+body {
+    font-family: "Lato", sans-serif;
+ 
+}
+
+/* Set a style for all buttons */
+.button {
+    position: absolute;
+   color: rgb(3, 49, 32);
+  padding: 14px 20px;
+  cursor: pointer;
+  width: 60%;
+  align-content: center;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.card {
+   
+    position: relative;
+    background-color: rgb(17, 173, 134);
+    display: flex;
+    justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 300px;
+  height: 400px;
+   align-items:center;
+  }
+.title {
+  color: grey;
+  font-size: 18px;
+}
+/* Center the image */
+.imgcard {
+    display: flex;
+   align-content: center;
+     text-align: center;
+  margin: 4px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 30%;
+}
+.fa {
+  font-size: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: rgba(4, 148, 117, 0.664);
+}
+.container {
+   
+   color: rgb(3, 49, 32);
+    cursor: pointer;
+   align-content: center
+}
+
+.input-field {
+    position:relative;
+  width: auto;
+  
+}
+
+
+
+
+/* The Modal (background) */
+.modal {
+   
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+   padding-top: 60px;
+     text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+  <button onclick="document.getElementById('id01').style.display='block'" class="button" style="width:auto;">Settings
+    <i class="fas fa-cogs"></i> </button>
+
+
+<div id="id01" class="modal">
+   
+    <form  >
+     
+             <div class="card">
+    <div class="content">
+            <h2>Settings</h2>
+            <img src="https://i.pinimg.com/564x/50/6e/83/506e83b6d821f8941a901f76a65f4fcc.jpg"  class="avatar"><br><br><hr>
+               
+              
+           
+        Notification <i onclick="myFunc(this)" class="far fa-bell"></i><br><hr>
+        <script>
+            function myFunc(x) {
+              x.classList.toggle("fa-bell-slash" );
+            }
+            </script>
+        Ratings <i onclick="myFunction(this)" class="fa fa-heart"></i><br><hr>
+       <script>
+        function myFunction(x) {
+          x.classList.toggle("fa-thumbs-down" );              
+        }
+        </script>
+         
+        
+            <input type="button" onclick="alert('queries will send by Ratings!Click')" value="Help" ><br><hr>
+            <div class="container">
+                Feedback <i onclick="Func(this)".style.display='block' class="input-field";>  <br>       
+                <input type="text"> <br><br><hr> <br><input type="submit" value="Submit">  <br>
+               </div></i>
+                 <script>
+                     function Func(x) {
+                       x.classList.toggle("input-field" );
+                      {  var container =document.x;}
+                     }
+
+                     </script></div>
+          
+           </form>           
+</div></div></div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "block";
+        }}
+    </script>
+
+</body>
+</html> 
