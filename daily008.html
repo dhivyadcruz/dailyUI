@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position:relative;
+ 
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 260px;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color:transparent;
+}
+
+.error:hover .overlay {
+  opacity: 1;
+}
+.error {
+  color: #8ca398d0;
+  font-size: 65px;
+  position: absolute;
+  bottom: 400px;
+  width: 100%;
+  text-align: center;
+}
+.text {
+  color: rgb(1, 12, 8);
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <img src="https://media.giphy.com/media/xTk9ZGxg0D3FhsihwI/giphy.gif" class="image">
+  <div class="error"><h1>404</h1>
+  <div class="overlay">
+    <div class="text"><h3>hey there,</h3>
+        <h5>SORRy, My dumbass couldn't find the page !</h5>
+    <p>Server must be hungover(or)
+         url is going blind(or)am dieing<br>
+        any way am sleepy BYe.. </p>
+</div>
+</div>
+  </div>
+</div>
+
+</body>
+</html>
