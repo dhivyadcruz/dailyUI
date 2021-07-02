@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://kit.fontawesome.com/6e9789f98c.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="style.css">
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: #fff;
+	font-family: 'poppins', sans-serif;
+}
+body{
+	min-height: 100vh;
+	background: #079167;
+	display: grid;
+	place-items: center;
+}
+.main{
+	position: relative;
+	width: 400px;
+	height: 550px;
+	border-radius: 18px;
+	background: #557e64;
+	overflow: hidden;
+}
+.main .top_bar .options{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: translateY(-70px);
+	transition: 0.5s;
+}
+.main .top_bar .active2{
+	transform: translateY(0px);
+}
+.main .top_bar .options button{
+	margin: 0 10px;
+	height: 40px;
+	width: 40px;
+	font-size: 18px;
+}
+.main .top_bar{
+	width: 100%;
+	padding: 10px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.main .top_bar button{
+	z-index: 20;
+	height: 45px;
+	width: 45px;
+	border-radius: 50%;
+	font-size: 25px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0,0,0,0.08);
+	box-shadow: 0.1px 8px 8px 2px rgba(0,0,0,0.2);
+}
+.main .top_bar button:hover,.main .control_part .control_buttons .main_btns button:hover{
+	background: linear-gradient(to right, #ff226c, #ff226c);
+	box-shadow: 0.1px 8px 8px 2px rgba(0,0,0,0.2) inset,
+	            0.1px 8px 8px 2px rgba(0,0,0,0.2);
+}
+.main .playing_part{
+	margin-top: 20px;
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.main .playing_part .img{
+	height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0.1px 4px 8px 2px rgba(0,0,0,0.1);
+}
+.main .playing_part .img img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+/*control_part*/
+.main .control_part{
+	margin-top: 30px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.main .control_part .song_title{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.main .control_part .song_title p{
+	font-size: 14px;
+}
+.main .control_part .song_title p:first-child{
+	font-size: 22px;
+	text-transform: capitalize;
+}
+.main .control_part .control_buttons{
+	margin-top: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+}
+.main .control_part .control_buttons .main_btns{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30px;
+}
+.main .control_part .control_buttons .main_btns button{
+	height: 55px;
+	width: 55px;
+	border-radius: 50%;
+	font-size: 30px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 18px;
+	background: rgba(0,0,0,0.08);
+	box-shadow: 0.1px 8px 8px 2px rgba(0,0,0,0.2);
+}
+.main .control_part .control_buttons .main_btns #play_btn{
+	background: linear-gradient(to right, #ff226c, #ff226c);
+	box-shadow: 0.1px 8px 8px 2px rgba(0,0,0,0.2) inset,
+	            0.1px 8px 8px 2px rgba(0,0,0,0.2);
+}
+
+/*playlist songs*/
+.playlist{
+	position: absolute;
+	bottom: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	background: #566573;
+	max-height: 0px;
+	overflow: hidden;
+	transition: 0.5s;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.main .active{
+	max-height: 100vh;
+	padding: 100px 0 0 0;
+}
+.playlist .p_song{
+    position: relative;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    padding: 12px 12px 20px 12px;
+    box-shadow: 0.1px 8px 8px 2px rgba(0,0,0,0.1);
+}
+.playlist .p_song:not(:first-child){
+	margin-top: 20px;
+}
+.playlist .p_song #p_title{
+	font-size: 20px;
+}
+.playlist .p_song #p_artist{
+	position: absolute;
+	bottom: 6px;
+	left: 15px;
+	font-size: 11px;
+}
+.playlist .p_song button{
+	height: 35px;
+	width: 35px;
+	border-radius: 50%;
+	font-size: 18px;
+	border: none;
+	cursor: pointer;
+	transition: 0.5s;
+	margin: 0 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0,0,0,0.08);
+	box-shadow: 0.1px 8px 8px 2px rgba(0,0,0,0.2);
+}
+.playlist .p_song:hover{
+   background: #1C2833;
+}
+.playlist .p_song:hover button{
+	background: #ff226c;
+}
+.main .active_song{
+	background: #1C2833;
+	box-shadow: none;
+}
+.playlist .active_song button{
+	background: linear-gradient(to right, #ff226c, #ff226c);
+	box-shadow: 0.1px 8px 8px 2px rgba(0,0,0,0.2) inset,
+	            0.1px 8px 8px 2px rgba(0,0,0,0.2);
+}
+
+.main .control_part {
+	-webkit-appearance: none;
+	outline: none;
+	text-align: center;
+	width: 85%;
+	height: 4px;
+	cursor: pointer;
+	position: relative;
+	border-radius: 3px;
+}
+
+
+</style>
+
+<body>
+
+	<div class="main">
+		
+		<!-- top bar -->
+		<div class="top_bar">
+			<button onclick="sidebar()"><i class='bx bx-chevron-right'></i></button>
+			<div class="options">
+				<button><i class='bx bx-music' ></i></button>
+				<button><i class='bx bxs-volume-low' ></i></button>
+				<button><i class='bx bx-edit-alt'></i></button>
+			</div>
+			<button onclick="open_p()"><i class='bx bx-menu-alt-left' ></i></button>
+		</div>
+
+		<div class="playing_part">
+			<div class="img">
+				<img src="https://i.pinimg.com/originals/cc/5b/d1/cc5bd115337a8331262f60f671041349.gif" alt="img">
+			</div>
+		</div>
+
+		<!-- control part -->
+		<div class="control_part">
+			<div class="song_title">
+				<p>Butter</p>
+				<p>BTS</p>
+			</div>
+
+			<div class="control_buttons">
+				<div class="range_slider">
+					<audio controls>
+						<source src="https://mp3.filmisongs.com/Butter%20-%20BTS.ogg" type="audio/ogg">
+						<source src="https://mp3.filmisongs.com/Butter%20-%20BTS.mp3" type="audio/mpeg">
+				    </audio>
+				</div>
+
+				<div class="main_btns">
+					<button id="previous"><i class='bx bx-skip-previous' ></i></button>
+					
+					<button id="previous"><i class='bx bx-skip-next' ></i></button>
+				</div>
+			</div>
+		</div>
+
+		<!-- playlist songs -->
+		<div class="playlist">
+			<div class="p_song">
+				<p id="p_title">it's complicated</p>
+				<p id="p_artist">Astrid</p>
+				<button><i class='bx bx-play' ></i></button>
+			</div>
+
+			<div class="p_song active_song">
+				<p id="p_title">life goes on</p>
+				<p id="p_artist">BTS</p>
+				<button><i class='bx bx-play' ></i></button>
+			</div>
+
+			<div class="p_song">
+				<p id="p_title">without me</p>
+				<p id="p_artist">Halsey</p>
+				<button><i class='bx bx-play' ></i></button>
+			</div>
+
+			<div class="p_song">
+				<p id="p_title">home</p>
+				<p id="p_artist">BTS</p>
+				<button><i class='bx bx-play' ></i></button>
+			</div>
+		</div>
+	</div>
+
+   <!--  javascript part -->
+	<script>
+		let playlist = document.querySelector('.playlist');
+		let options = document.querySelector('.options');
+		
+		function open_p(){
+			playlist.classList.toggle('active');
+		}
+
+		function sidebar(){
+			options.classList.toggle('active2');
+		}
+	</script>
+	
+</body>
+</html>
