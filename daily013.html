@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.container {
+  border: 0px solid #dedede;
+  background-color: #e287bf;
+  border-radius: 3%;
+  padding: 3px;
+  margin: 10px 0;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: rgba(11, 223, 134, 0.904);
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+.text input[type=text] {
+  padding: 6px;
+  margin: 10px , 0;
+  font-size: 17px;
+  width:100px;
+}
+
+.text .login-container button {
+  float: right;
+  padding: 6px 10px;
+  background-color: #555;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.text .login-container button:hover {
+  background-color: rgb(13, 190, 117);
+}
+  .text .login-container {
+    float: none;
+  }
+</style>
+</head>
+<body>
+
+<h2>Chat Messages</h2>
+
+<div class="container darker">
+  <img src="https://media1.tenor.com/images/fe75efdd6205f5a6340254ee9c7fe9d7/tenor.gif?itemid=11023609" style="width:100%;">
+  <p>Annyeong.Pizza ?</p>
+  <span class="time-right">11:00</span>
+</div>
+
+<div class="container">
+  <img src="https://media1.tenor.com/images/29ad3f18c1f7e3174e6c2398c0915322/tenor.gif?itemid=14589247" class="right" style="width:100%;">
+  <p>chuva! I'm in!</p>
+  <span class="time-left">11:01</span>
+</div>
+
+<div class="container">
+  <img src="http://pa1.narvii.com/6832/7d8602af98dc590d13139c440eb3c78744b6e511_00.gif" class="right" style="width:100%;">
+  <p>Sweet! So, whose gonna pay?</p>
+  <span class="time-left">11:02</span>
+</div>
+
+<div class="container darker">
+  <img src="https://media1.tenor.com/images/fe75efdd6205f5a6340254ee9c7fe9d7/tenor.gif?itemid=11023609" style="width:100%;">
+  <p>Who else, RJ! hehe </p>
+  <span class="time-right">11:05</span>
+</div>
+
+<div class="text">  
+  <div class="login-container">    
+     <input type="text" placeholder="Type here" style="width:80%">
+      <button  onclick="myFunction()">Send</button>
+  </div>
+</div>
+
+</body>
+</html>
