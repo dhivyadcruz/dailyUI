@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://kit.fontawesome.com/6e9789f98c.js" crossorigin="anonymous"></script>
+    <style>
+    * {box-sizing: border-box}
+    body{background-color: rgb(170, 223, 202);}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: rgb(23, 148, 100);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.container {
+  padding: 16px;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover,a:hover {
+  opacity: 0.7;
+}
+
+
+.container {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.html {width: 99.9%; background-color: #8904aa;}
+.css {width: 85%; background-color: #ec21f3;}
+.js {width: 80%; background-color: #f436a5;}
+.php {width: 80%; background-color: #b661b6;}
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center">Leadership Card</h2>
+    <div class="card">
+      
+  <img src="https://lh3.googleusercontent.com/Dymxkx9AtPFRx8vE1bbopiHxp_23poOLZD9XTYFVenXjb7fdcqGW6BEpYx4yuSu7XeXYg1HYhFqKdNlSmHu9vO2__rfH5s-FO4dYtSQH9-ZMK2riGkI2gQo1clyKhXTaFyDjqGy7kzyY_RwiPqlRaGCs_nu57Im_xoKcNl8BILyrNTnkzXhohfARZkGgkW7GB529xUDXMD8bUSH-0LiypHFEo2VuVgvJl7M_9Gi5_kWh1Pt-zMnTxSQr41414lMKX2vWmqvVlN85A_eJfPVzdmJk0sxxq10RUnCIVQNu1pi3QRmYnnp9LfzPAUU4VALkGI1t0DTXz5lsnqZ26pulELXGrwNAWLAuNYkCnUUvbnTIIFzDPPOn8p8o2tkoEmJuaYlVegUGDgaBlOHQkfKgyS7GLV1vF_71sQoUZNgn79av030CZlj-3D79Aj722xNOBEA1EHGZxvY7GQKJRQagujAFWicK50Mkfa39KTCVh6qrcUqwT9Tg96PxS3IjgJ8gnHNin3UpnDXTyBhddWVL6-EhavkWIYlJ8y6Te9ud3n_z9G3bH5h8jP5PxmxUUpUeO_3Y9KUjluMhZAkJxtkKft9d_0HzCZ77GAR0rgtCvIYeBUYeiu3ZO6M5oRkNTjwMlMkCaffYVmeeohtJ5lPbpWhSLOJoGSbgO_Dcx_prLdFVh2rbrZvh9MQpohO6NSnlWdPA6HRorjDgbJ_-fCNAiNtK=w834-h627-no?authuser=0" style="width:100%">
+  <h1>BTS</h1>
+  <p class="title">Music Artists</p>
+  <p>Asia's biggest pop group and won upto 372 Awards!.<br>
+      Broke guinness and more.<br> World's biggest fanbase. <br></p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fab fa-instagram"></i></a>  
+  </div>
+<button onclick="document.getElementById('id01').style.display='block'">Chart</button>
+    </div>
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+<p>Talent</p>
+<div class="container">
+  <div class="skills html">99.9%</div>
+</div>
+
+<p>Fanbase</p>
+<div class="container">
+  <div class="skills css">85%</div>
+</div>
+
+<p>Awards</p>
+<div class="container">
+  <div class="skills js">80%</div>
+</div>
+
+<p>Performance</p>
+<div class="container">
+  <div class="skills php">80%</div>
+</div></div> </div></form></div>
+</body>
+</html>
